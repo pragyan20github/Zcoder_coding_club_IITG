@@ -1,0 +1,78 @@
+{
+  "name": "zcoder-backend",
+  "version": "1.0.0",
+  "description": "ZCoder - Collaborative Coding Platform Backend Server",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write **/*.js"
+  },
+  "keywords": [
+    "socket.io",
+    "express",
+    "chat",
+    "collaboration",
+    "real-time",
+    "websocket",
+    "api"
+  ],
+  "author": "ZCoder Team",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.8.1",
+    "helmet": "^7.0.0",
+    "mongoose": "^8.15.1",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "jest": "^29.6.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/zcoder-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/zcoder-platform/issues"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/",
+      "logs/",
+      "*.test.js"
+    ],
+    "ext": "js,json",
+    "env": {
+      "NODE_ENV": "development"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!node_modules/**",
+      "!coverage/**"
+    ]
+  },
+  "homepage": "https://github.com/your-username/zcoder-platform#readme"
+}
